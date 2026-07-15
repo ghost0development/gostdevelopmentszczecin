@@ -9,15 +9,25 @@ interface WidgetData {
   name: string;
   presence_count: number;
   instant_invite: string;
+  channels: number;
+  members: number;
 }
 
+const fallback: WidgetData = {
+  name: "Ghost Development",
+  presence_count: 0,
+  instant_invite: "https://discord.gg/jmb5uW24h",
+  channels: 0,
+  members: 0,
+};
+
 export default function DiscordWidget() {
-  const [data, setData] = useState<WidgetData | null>(null);
+  const [data, setData] = useState<WidgetData>(fallback);
 
   useEffect(() => {
-    fetch("https://discord.com/api/guilds/1527005904590082259/widget.json")
+    fetch("/discord-data.json")
       .then((r) => (r.ok ? r.json() : null))
-      .then((d) => d && setData(d))
+      .then((d: WidgetData | null) => d && setData(d))
       .catch(() => {});
   }, []);
 
@@ -70,12 +80,12 @@ export default function DiscordWidget() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">{data?.name || "Ghost Development"}</h3>
+                  <h3 className="text-lg font-semibold">{data.name}</h3>
                   <div className="flex items-center gap-3 mt-1">
                     <div className="flex items-center gap-1.5">
                       <span className="w-2 h-2 bg-green-500 rounded-full" />
                       <span className="text-[12px] text-muted">
-                        {data ? `${data.presence_count} online` : "Online"}
+                        {data.presence_count > 0 ? `${data.presence_count} online` : "Online"}
                       </span>
                     </div>
                   </div>
@@ -86,19 +96,19 @@ export default function DiscordWidget() {
               <div className="grid grid-cols-2 gap-3 mb-6">
                 <div className="p-3 bg-surface border border-border rounded-sm">
                   <Users className="w-4 h-4 text-[#5865F2]/60 mb-2" />
-                  <span className="text-lg font-semibold block">3.6K+</span>
+                  <span className="text-lg font-semibold block">{data.members > 0 ? data.members : "—"}</span>
                   <span className="mono text-[9px] text-muted/40 uppercase tracking-[0.2em]">Członków</span>
                 </div>
                 <div className="p-3 bg-surface border border-border rounded-sm">
                   <MessageCircle className="w-4 h-4 text-[#5865F2]/60 mb-2" />
-                  <span className="text-lg font-semibold block">{data?.presence_count || "—"}</span>
+                  <span className="text-lg font-semibold block">{data.presence_count > 0 ? data.presence_count : "—"}</span>
                   <span className="mono text-[9px] text-muted/40 uppercase tracking-[0.2em]">Online</span>
                 </div>
               </div>
 
               {/* Join button */}
               <a
-                href={data?.instant_invite || "https://discord.gg/jmb5uW24h"}
+                href={data.instant_invite}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/btn w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#5865F2] text-white text-sm font-semibold rounded-sm hover:bg-[#4752C4] hover:shadow-[0_0_30px_rgba(88,101,242,0.2)] transition-all duration-300"

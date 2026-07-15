@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Fetch Discord data
+        run: node scripts/fetch-discord.js
+
       - name: Build
         run: npm run build
 
