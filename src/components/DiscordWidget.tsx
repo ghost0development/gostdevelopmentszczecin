@@ -38,7 +38,7 @@ export default function DiscordWidget() {
   const [data, setData] = useState<DiscordData | null>(null);
 
   useEffect(() => {
-    fetch("/discord-data.json")
+    fetch("/gostdevelopmentszczecin/discord-data.json")
       .then((r) => r.json())
       .then(setData)
       .catch(() => {});
