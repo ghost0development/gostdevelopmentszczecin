@@ -75,7 +75,7 @@ export default function DiscordWidget() {
 
               {/* Join button */}
               <a
-                href="https://discord.gg/ghostdev"
+                href="https://discord.gg/jmb5uW24h"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/btn w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#5865F2] text-white text-sm font-semibold rounded-sm hover:bg-[#4752C4] hover:shadow-[0_0_30px_rgba(88,101,242,0.2)] transition-all duration-300"
