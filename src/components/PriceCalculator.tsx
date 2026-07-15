@@ -32,7 +32,7 @@ export default function PriceCalculator() {
   const firstMonth = total > 0 ? options.launcher[launcher].price / 2 : 0;
 
   return (
-    <section className="section grid-bg">
+    <section id="cennik" className="section grid-bg">
       <div className="container">
         <motion.div
           initial={{ opacity: 0 }}
