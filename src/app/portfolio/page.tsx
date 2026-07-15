@@ -1,8 +1,8 @@
 export const metadata = {
-  title: "Portfolio | Ghost Development — Realizacje launcherów Minecraft",
+  title: "Portfolio | Ghost Development — Realizacje launcherów Minecraft Szczecin",
   description: "Zobacz nasze realizacje — dedykowane launchery desktopowe dla serwerów Minecraft. Sprawdź co możemy dla Ciebie zrobić.",
   openGraph: {
-    title: "Portfolio | Ghost Development",
+    title: "Portfolio | Ghost Development — Szczecin",
     description: "Nasze realizacje — dedykowane launchery desktopowe dla serwerów Minecraft.",
     type: "website",
     locale: "pl_PL",

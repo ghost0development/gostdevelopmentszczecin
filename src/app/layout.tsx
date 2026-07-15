@@ -12,47 +12,82 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ghost Development — Dedykowane launchery do Minecrafta",
+  title: "Ghost Development — Dedykowane launchery do Minecrafta | Szczecin",
   description:
-    "Projektujemy i budujemy dedykowane launchery desktopowe dla serwerów Minecraft. Electron, Java, Kotlin — dopasowujemy technologię do Twoich potrzeb.",
-  keywords: ["minecraft", "launcher", "dedykowany launcher", "electron", "serwer minecraft", "ghost development", "Szczecin"],
+    "Tworzymy dedykowane launchery desktopowe dla serwerów Minecraft w Szczecinie. Electron, Java, Kotlin. Od 1500 PLN. Bezpłatna konsultacja.",
+  keywords: [
+    "launcher minecraft", "dedykowany launcher", "launcher do serwera", "minecraft launcher Szczecin",
+    "programista minecraft", "electron minecraft", "launcher desktopowy", "serwer minecraft launcher",
+    "ghost development", "Szczecin", "tworzenie launcherów", "minecraft plugin", "integracja serwera minecraft",
+    "launcher java", "launcher kotlin", "aplikacja desktopowa minecraft",
+  ],
   authors: [{ name: "Ghost Development" }],
   openGraph: {
-    title: "Ghost Development — Dedykowane launchery do Minecrafta",
-    description: "Projektujemy i budujemy dedykowane launchery desktopowe dla serwerów Minecraft.",
+    title: "Ghost Development — Dedykowane launchery do Minecrafta | Szczecin",
+    description: "Tworzymy dedykowane launchery desktopowe dla serwerów Minecraft. Szczecin. Od 1500 PLN.",
     type: "website",
     locale: "pl_PL",
     siteName: "Ghost Development",
+    url: "https://ghost0development.github.io/gostdevelopmentszczecin",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ghost Development — Dedykowane launchery do Minecrafta",
-    description: "Projektujemy i budujemy dedykowane launchery desktopowe dla serwerów Minecraft.",
+    title: "Ghost Development — Dedykowane launchery do Minecrafta | Szczecin",
+    description: "Tworzymy dedykowane launchery desktopowe dla serwerów Minecraft. Szczecin. Od 1500 PLN.",
   },
   robots: {
     index: true,
     follow: true,
   },
+  other: {
+    "geo.region": "PL-32",
+    "geo.placename": "Szczecin",
+    "geo.position": "53.4285;14.5528",
+    "ICBM": "53.4285, 14.5528",
+  },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "LocalBusiness",
+  "@id": "https://ghost0development.github.io/gostdevelopmentszczecin",
   name: "Ghost Development",
-  description: "Projektujemy i budujemy dedykowane launchery desktopowe dla serwerów Minecraft. Od projektu po wdrożenie i opiekę techniczną.",
+  alternateName: "ghostdev",
+  description: "Tworzymy dedykowane launchery desktopowe dla serwerów Minecraft. Electron, Java, Kotlin. Od projektu po wdrożenie i opiekę techniczną.",
   url: "https://ghost0development.github.io/gostdevelopmentszczecin",
   email: "kontakt.gd.Bartoszosiej@outlook.com",
+  telephone: "+48508302053",
+  image: "https://ghost0development.github.io/gostdevelopmentszczecin/logo.jpeg",
+  logo: "https://ghost0development.github.io/gostdevelopmentszczecin/logo.jpeg",
   address: {
     "@type": "PostalAddress",
     streetAddress: "ul. Asnyka 3/22",
     addressLocality: "Szczecin",
+    addressRegion: "Zachodniopomorskie",
     postalCode: "71-526",
     addressCountry: "PL",
   },
-  telephone: "+48508302053",
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 53.4285,
+    longitude: 14.5528,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "17:00",
+    },
+  ],
   priceRange: "1500-4000 PLN",
+  paymentAccepted: "Gotówka, przelew, faktura VAT",
+  currenciesAccepted: "PLN",
   serviceType: ["Dedykowany launcher", "Integracja z serwerem", "Wsparcie techniczne"],
-  areaServed: "PL",
+  areaServed: {
+    "@type": "Country",
+    name: "Polska",
+  },
   foundingDate: "2026-02-09",
   sameAs: [],
   hasOfferCatalog: {
@@ -67,6 +102,16 @@ const jsonLd = {
           description: "Projektowanie i budowa dedykowanego launchera desktopowego dla serwera Minecraft. Electron, Java, Kotlin.",
         },
         price: "1500-4000 PLN",
+        priceCurrency: "PLN",
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Integracja z ekosystemem serwera Minecraft",
+          description: "REST API, WebSocket, RCON. Automatyczna synchronizacja z backendem serwera.",
+        },
+        price: "w cenie launchera",
         priceCurrency: "PLN",
       },
       {
