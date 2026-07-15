@@ -25,24 +25,6 @@ const projects = [
       "Integracja z Discord Rich Presence",
     ],
   },
-  {
-    name: "Projekt #2",
-    status: "Planowany",
-    statusColor: "bg-muted/30",
-    desc: "Launcher dla sieci serwerów PvP z matchmakingiem i statystykami.",
-    stack: ["Electron", "Java", "WebSocket"],
-    stats: [],
-    features: [],
-  },
-  {
-    name: "Projekt #3",
-    status: "Planowany",
-    statusColor: "bg-muted/30",
-    desc: "System zarządzania wersjami i pluginami dla administratorów serwerów.",
-    stack: ["Kotlin", "REST API", "Docker"],
-    stats: [],
-    features: [],
-  },
 ];
 
 export default function PortfolioPage() {
@@ -71,7 +53,7 @@ export default function PortfolioPage() {
           </p>
         </motion.div>
 
-        <div className="space-y-px">
+        <div className="max-w-4xl">
           {projects.map((project, idx) => (
             <motion.div
               key={project.name}
