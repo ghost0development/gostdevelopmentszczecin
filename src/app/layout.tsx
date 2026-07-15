@@ -53,7 +53,7 @@ const jsonLd = {
   priceRange: "1500-4000 PLN",
   serviceType: ["Dedykowany launcher", "Integracja z serwerem", "Wsparcie techniczne"],
   areaServed: "PL",
-  foundingDate: "2024",
+  foundingDate: "2026-02-09",
   sameAs: [],
   hasOfferCatalog: {
     "@type": "OfferCatalog",

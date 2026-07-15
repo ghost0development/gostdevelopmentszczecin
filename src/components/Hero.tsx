@@ -103,7 +103,7 @@ export default function Hero() {
             <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
           </span>
           <span className="mono text-[10px] text-muted uppercase tracking-[0.25em]">
-            Ghost Development · Est. 2024 · Wrocław, PL
+            Ghost Development · Est. 02.2026 · Szczecin, PL
           </span>
         </motion.div>
       </motion.div>
@@ -204,7 +204,7 @@ export default function Hero() {
         </MagneticButton>
 
         <div className="hidden md:flex items-center gap-6 mono text-[9px] text-muted/20 uppercase tracking-[0.2em]">
-          <span>Wrocław, PL</span>
+          <span>Szczecin, PL</span>
           <span className="w-px h-3 bg-white/10" />
           <EmailModal>
             <span className="hover:text-accent/40 transition-colors cursor-pointer">kontakt.gd.Bartoszosiej@outlook.com</span>
