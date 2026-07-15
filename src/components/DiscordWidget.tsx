@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Users, Headphones, ExternalLink } from "lucide-react";
-import Image from "next/image";
 
 interface DiscordMember {
   id: string;
@@ -87,8 +86,8 @@ export default function DiscordWidget() {
             <div className="relative px-5 py-4 bg-surface-alt border-b border-border">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg overflow-hidden border border-border-strong flex-shrink-0">
-                  <Image
-                    src="/logo.jpeg"
+                  <img
+                    src="/gostdevelopmentszczecin/logo.jpeg"
                     alt="Ghost Development"
                     width={40}
                     height={40}
