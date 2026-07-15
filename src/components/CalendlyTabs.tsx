@@ -80,7 +80,7 @@ export default function CalendlyTabs() {
       </div>
 
       {/* Calendly embed */}
-      <div className="border border-border-strong overflow-hidden" style={{ height: "680px" }}>
+      <div className="border border-border-strong overflow-hidden h-[500px] sm:h-[600px] md:h-[680px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={active}

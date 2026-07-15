@@ -2,6 +2,22 @@
 
 import { motion } from "framer-motion";
 
+const WIDGET_BASE = "https://valendres.github.io/react-discord-widget/";
+const PARAMS = [
+  "serverId=1527005904590082259",
+  "showHeader=true",
+  "showChannels=true",
+  "showServerStats=true",
+  "bodyBackgroundColor=%2308080a",
+  "headerBackgroundColor=%230f0f12",
+  "headerFontColor=%23e8e8ec",
+  "channelFontColor=%2355556a",
+  "memberFontColor=%2355556a",
+  "serverStatsFontColor=%2355556a",
+  "fontFamily=system-ui",
+  "refreshInterval=30000",
+].join("&");
+
 export default function DiscordWidget() {
   return (
     <section className="section">
@@ -35,14 +51,13 @@ export default function DiscordWidget() {
           transition={{ duration: 0.5 }}
           className="max-w-lg"
         >
-          <div className="border border-border-strong overflow-hidden relative">
+          <div className="border border-border-strong overflow-hidden">
             <iframe
-              src="https://discord.com/widget?id=1527005904590082259&theme=dark"
+              src={`${WIDGET_BASE}?${PARAMS}`}
               width="350"
               height="500"
               allowTransparency
               frameBorder="0"
-              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
               className="w-full max-w-[350px] block"
               title="Discord widget"
             />

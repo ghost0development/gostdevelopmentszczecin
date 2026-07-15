@@ -63,13 +63,13 @@ export default function InteractiveDemo() {
         <TiltCard className="max-w-3xl mx-auto">
           <div className="border border-border-strong rounded-lg overflow-hidden shadow-2xl shadow-black/50">
             {/* Title bar */}
-            <div className="flex items-center justify-between px-4 py-2.5 bg-surface border-b border-border">
+            <div className="flex items-center justify-between px-3 py-2.5 bg-surface border-b border-border sm:px-4">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-red-500/70" />
                 <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
                 <div className="w-3 h-3 rounded-full bg-green-500/70" />
               </div>
-              <span className="mono text-[10px] text-muted/40">GhostLauncher v1.0 — Redstone-MC.PL</span>
+              <span className="mono text-[10px] text-muted/40 hidden sm:block">GhostLauncher v1.0 — Redstone-MC.PL</span>
               <div className="flex items-center gap-1">
                 <button className="p-1 text-muted/30 hover:text-muted transition-colors"><Minus className="w-3 h-3" /></button>
                 <button className="p-1 text-muted/30 hover:text-muted transition-colors"><Maximize2 className="w-3 h-3" /></button>
@@ -77,9 +77,27 @@ export default function InteractiveDemo() {
               </div>
             </div>
 
-            <div className="grid grid-cols-5 min-h-[350px]">
-              {/* Sidebar */}
-              <div className="col-span-1 bg-surface border-r border-border p-2 space-y-1">
+            {/* Mobile: horizontal tabs */}
+            <div className="flex sm:hidden bg-surface border-b border-border">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`flex-1 flex flex-col items-center gap-0.5 py-2.5 px-1 transition-all duration-200 ${
+                    activeTab === tab.id
+                      ? "bg-accent/10 text-accent border-b-2 border-accent"
+                      : "text-muted/40 hover:text-muted"
+                  }`}
+                >
+                  <tab.icon className="w-4 h-4" />
+                  <span className="mono text-[7px] uppercase tracking-wider">{tab.label}</span>
+                </button>
+              ))}
+            </div>
+
+            <div className="flex min-h-[300px] sm:min-h-[350px]">
+              {/* Desktop sidebar */}
+              <div className="hidden sm:block col-span-1 bg-surface border-r border-border p-2 space-y-1 w-[72px] shrink-0">
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
@@ -97,7 +115,7 @@ export default function InteractiveDemo() {
               </div>
 
               {/* Content */}
-              <div className="col-span-4 p-5">
+              <div className="flex-1 p-4 sm:p-5">
                 <AnimatePresence mode="wait">
                   {activeTab === "play" && (
                     <motion.div

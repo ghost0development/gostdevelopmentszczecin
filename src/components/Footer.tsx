@@ -38,7 +38,7 @@ export default function Footer() {
             <span className="mono text-[9px] text-muted/30 uppercase tracking-[0.3em] block mb-3">Kontakt</span>
             <div className="flex flex-col gap-2">
               <EmailModal>
-                <span className="text-[13px] text-muted hover:text-text transition-colors cursor-pointer">
+                <span className="text-[13px] text-muted hover:text-text transition-colors cursor-pointer break-all">
                   kontakt.gd.Bartoszosiej@outlook.com
                 </span>
               </EmailModal>

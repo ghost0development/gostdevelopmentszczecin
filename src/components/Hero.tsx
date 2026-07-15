@@ -87,7 +87,7 @@ export default function Hero() {
   const scale = useTransform(scrollY, [0, 400], [1, 0.97]);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-between px-6 md:px-10 lg:px-16 pb-12 md:pb-20 pt-24 md:pt-32 overflow-hidden">
+    <section className="relative min-h-[100dvh] flex flex-col justify-between px-5 sm:px-6 md:px-10 lg:px-16 pb-10 md:pb-20 pt-20 md:pt-32 overflow-hidden">
       <BlueprintGrid />
 
       {/* Top: Status */}
@@ -117,14 +117,14 @@ export default function Hero() {
               <div className="mb-2">
                 <TextReveal
                   text="Tworzymy launchery,"
-                  className="text-[clamp(2.75rem,7.25vw,6.75rem)] leading-[0.92] font-bold tracking-[-0.03em] block"
+                  className="text-[clamp(2.25rem,7.25vw,6.75rem)] leading-[0.92] font-bold tracking-[-0.03em] block"
                   delay={2}
                 />
               </div>
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8">
                 <TextReveal
                   text="które działają."
-                  className="text-[clamp(2.75rem,7.25vw,6.75rem)] leading-[0.92] font-bold tracking-[-0.03em] accent block"
+                  className="text-[clamp(2.25rem,7.25vw,6.75rem)] leading-[0.92] font-bold tracking-[-0.03em] accent block"
                   delay={2.4}
                 />
               </div>
