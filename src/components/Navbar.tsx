@@ -9,8 +9,6 @@ const navLinks = [
   { href: "/#co-robimy", label: "Usługi" },
   { href: "/#proces", label: "Proces" },
   { href: "/#cennik", label: "Cennik" },
-  { href: "/rezerwacja", label: "Rezerwacja" },
-  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export default function Navbar() {

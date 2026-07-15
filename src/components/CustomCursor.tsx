@@ -64,7 +64,7 @@ export default function CustomCursor() {
       {/* Dot */}
       <div
         ref={dot}
-        className="fixed top-0 left-0 pointer-events-none z-[9998] mix-blend-difference hidden md:block"
+        className="fixed top-0 left-0 pointer-events-none z-[150] mix-blend-difference hidden md:block"
       >
         <motion.div
           animate={{
@@ -79,7 +79,7 @@ export default function CustomCursor() {
       {/* Ring */}
       <div
         ref={ring}
-        className="fixed top-0 left-0 pointer-events-none z-[9997] hidden md:block"
+        className="fixed top-0 left-0 pointer-events-none z-[150] hidden md:block"
       >
         <motion.div
           animate={{
