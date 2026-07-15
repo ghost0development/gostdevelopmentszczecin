@@ -32,8 +32,16 @@ const statusColors: Record<string, string> = {
   offline: "bg-gray-500",
 };
 
+const fallbackData: DiscordData = {
+  name: "Ghost Development",
+  presence_count: 0,
+  instant_invite: "https://discord.gg/jmb5uW24h",
+  channels: [],
+  members: [],
+};
+
 export default function DiscordWidget() {
-  const [data, setData] = useState<DiscordData | null>(null);
+  const [data, setData] = useState<DiscordData>(fallbackData);
 
   useEffect(() => {
     fetch("/gostdevelopmentszczecin/discord-data.json")
@@ -88,11 +96,11 @@ export default function DiscordWidget() {
                   />
                 </div>
                 <div className="min-w-0">
-                  <span className="text-sm font-semibold block truncate">{data?.name || "Ghost Development"}</span>
+                  <span className="text-sm font-semibold block truncate">{data.name}</span>
                   <div className="flex items-center gap-1.5">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                     <span className="mono text-[10px] text-muted">
-                      {data?.presence_count ?? 0} online
+                      {data.presence_count} online
                     </span>
                   </div>
                 </div>
@@ -100,7 +108,7 @@ export default function DiscordWidget() {
             </div>
 
             {/* Voice channels */}
-            {data && data.channels.length > 0 && (
+            {data.channels.length > 0 && (
               <div className="px-5 py-3 border-b border-border">
                 <span className="mono text-[9px] text-muted/40 uppercase tracking-[0.2em] block mb-2">
                   Kanały głosowe
@@ -120,7 +128,7 @@ export default function DiscordWidget() {
             )}
 
             {/* Online members */}
-            {data && data.members.length > 0 && (
+            {data.members.length > 0 && (
               <div className="px-5 py-3 border-b border-border">
                 <span className="mono text-[9px] text-muted/40 uppercase tracking-[0.2em] block mb-2">
                   Online
@@ -128,7 +136,7 @@ export default function DiscordWidget() {
                 <div className="flex flex-wrap gap-1.5">
                   {data.members.map((m) => (
                     <div key={m.id} className="relative group">
-                      <div className="w-8 h-8 rounded-full overflow-hidden border border-border-strong bg-surface-alt flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full border border-border-strong bg-surface-alt flex items-center justify-center">
                         <span className="mono text-[10px] font-semibold text-accent">
                           {m.username[0].toUpperCase()}
                         </span>
@@ -146,24 +154,22 @@ export default function DiscordWidget() {
             )}
 
             {/* Stats */}
-            <div className="px-5 py-3 flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-1.5">
-                  <Users className="w-3.5 h-3.5 text-muted/30" />
-                  <span className="mono text-[11px] text-muted">
-                    {data?.members?.length ?? 0} / {data?.presence_count ?? 0}
-                  </span>
-                </div>
-                <span className="mono text-[11px] text-muted/30">
-                  {data?.channels?.length ?? 0} kanałów
+            <div className="px-5 py-3 flex items-center gap-4 border-b border-border">
+              <div className="flex items-center gap-1.5">
+                <Users className="w-3.5 h-3.5 text-muted/30" />
+                <span className="mono text-[11px] text-muted">
+                  {data.members.length} / {data.presence_count}
                 </span>
               </div>
+              <span className="mono text-[11px] text-muted/30">
+                {data.channels.length} kanałów
+              </span>
             </div>
 
             {/* Join button */}
-            <div className="px-5 pb-4">
+            <div className="px-5 py-4">
               <a
-                href={data?.instant_invite || "https://discord.gg/jmb5uW24h"}
+                href={data.instant_invite}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#5865F2] hover:bg-[#4752C4] text-white text-sm font-semibold rounded transition-colors"
