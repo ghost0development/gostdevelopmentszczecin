@@ -8,9 +8,7 @@ import Image from "next/image";
 interface DiscordMember {
   id: string;
   username: string;
-  avatar: string | null;
   status: string;
-  avatar_url: string;
 }
 
 interface DiscordChannel {
@@ -130,25 +128,14 @@ export default function DiscordWidget() {
                 <div className="flex flex-wrap gap-1.5">
                   {data.members.map((m) => (
                     <div key={m.id} className="relative group">
-                      <div className="w-8 h-8 rounded-full overflow-hidden border border-border-strong bg-surface-alt">
-                        {m.avatar_url ? (
-                          <Image
-                            src={m.avatar_url}
-                            alt={m.username}
-                            width={32}
-                            height={32}
-                            className="w-full h-full object-cover"
-                          />
-                        ) : (
-                          <div className="w-full h-8 flex items-center justify-center bg-accent/10 text-accent mono text-[10px] font-semibold">
-                            {m.username[0].toUpperCase()}
-                          </div>
-                        )}
+                      <div className="w-8 h-8 rounded-full overflow-hidden border border-border-strong bg-surface-alt flex items-center justify-center">
+                        <span className="mono text-[10px] font-semibold text-accent">
+                          {m.username[0].toUpperCase()}
+                        </span>
                       </div>
                       <span
                         className={`absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full border-2 border-surface ${statusColors[m.status] || statusColors.offline}`}
                       />
-                      {/* Tooltip */}
                       <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-bg border border-border-strong rounded text-[10px] text-text whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
                         {m.username}
                       </span>
