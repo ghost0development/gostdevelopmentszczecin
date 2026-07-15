@@ -1,0 +1,213 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme inline {
+  --color-bg: #08080a;
+  --color-surface: #0f0f12;
+  --color-surface-alt: #141418;
+  --color-accent: #c8ff00;
+  --color-accent-hover: #d4ff33;
+  --color-text: #e8e8ec;
+  --color-muted: #55556a;
+  --color-border: rgba(255, 255, 255, 0.05);
+  --color-border-strong: rgba(255, 255, 255, 0.08);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* { scrollbar-width: none; }
+*::-webkit-scrollbar { display: none; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #08080a;
+  color: #e8e8ec;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(200, 255, 0, 0.18);
+  color: #fff;
+}
+
+/* --- Core utilities --- */
+
+.mono { font-family: var(--font-mono), monospace; }
+.accent { color: #c8ff00; }
+
+.section {
+  padding: 7rem 1.5rem;
+}
+@media (min-width: 768px) { .section { padding: 9rem 2.5rem; } }
+@media (min-width: 1024px) { .section { padding: 10rem 4rem; } }
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* --- Noise overlay --- */
+.noise {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* --- Background mesh --- */
+.mesh {
+  background-color: #08080a;
+  background-image:
+    radial-gradient(ellipse 60% 50% at 5% 0%, rgba(200, 255, 0, 0.015) 0%, transparent 100%),
+    radial-gradient(ellipse 50% 40% at 95% 100%, rgba(200, 255, 0, 0.008) 0%, transparent 100%);
+}
+
+/* --- Section divider --- */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(200, 255, 0, 0.12) 50%, transparent 100%);
+}
+
+/* --- Grid background pattern --- */
+.grid-bg {
+  background-color: #08080a;
+  background-image:
+    linear-gradient(rgba(200, 255, 0, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 255, 0, 0.012) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* --- Accent dot --- */
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c8ff00;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.dot:hover { transform: scale(1.5); }
+
+/* --- Link hover underline --- */
+.hover-line {
+  position: relative;
+  display: inline-block;
+}
+.hover-line::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #c8ff00;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-line:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* --- Smooth section transitions --- */
+section {
+  will-change: opacity;
+}
+
+/* --- Interactive cards --- */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Animations --- */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 35s linear infinite; }
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+.pulse-dot { animation: pulse-dot 2.5s ease-in-out infinite; }
+
+@keyframes draw-line {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes glitch-1 {
+  0%, 90%, 100% { transform: translate(0); }
+  92% { transform: translate(-2px, 1px); }
+  94% { transform: translate(2px, -1px); }
+  96% { transform: translate(-1px, 2px); }
+  98% { transform: translate(1px, -2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 90%, 100% { transform: translate(0); }
+  91% { transform: translate(2px, -1px); }
+  93% { transform: translate(-2px, 1px); }
+  95% { transform: translate(1px, 2px); }
+  97% { transform: translate(-1px, -2px); }
+}
+
+/* --- Custom cursor dot --- */
+@media (hover: hover) {
+  .cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #c8ff00;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    mix-blend-mode: difference;
+    transition: transform 0.15s ease;
+  }
+}
+
+/* --- Selection --- */
+.text-selection {
+  background: linear-gradient(135deg, #c8ff00, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Leaflet overrides --- */
+.leaflet-control-attribution {
+  text-decoration: none !important;
+  -webkit-text-size-adjust: none;
+  unicode-bidi: isolate;
+}
+.leaflet-control-attribution a {
+  text-decoration: none !important;
+}
+.leaflet-container {
+  font-family: inherit;
+}
