@@ -14,19 +14,19 @@ async function main() {
       name: data.name || "Ghost Development",
       presence_count: data.presence_count || 0,
       instant_invite: data.instant_invite || "https://discord.gg/jmb5uW24h",
-      channels: (data.channels || []).length,
-      members: (data.members || []).length,
+      channels: data.channels || [],
+      members: data.members || [],
     };
     fs.writeFileSync(OUTPUT, JSON.stringify(out, null, 2));
-    console.log("Discord data fetched:", out);
+    console.log("Discord data fetched:", out.name, `- ${out.presence_count} online`);
   } catch (e) {
     console.warn("Discord fetch failed, using fallback:", e.message);
     const fallback = {
       name: "Ghost Development",
       presence_count: 0,
       instant_invite: "https://discord.gg/jmb5uW24h",
-      channels: 0,
-      members: 0,
+      channels: [],
+      members: [],
     };
     fs.writeFileSync(OUTPUT, JSON.stringify(fallback, null, 2));
   }

@@ -2,6 +2,36 @@
   "name": "Ghost Development",
   "presence_count": 1,
   "instant_invite": "https://discord.com/invite/TsbhHgxq",
-  "channels": 4,
-  "members": 1
+  "channels": [
+    {
+      "id": "1527005905525145688",
+      "name": "🎵・Music",
+      "position": 18
+    },
+    {
+      "id": "1527005905730797578",
+      "name": "💤・AFK",
+      "position": 20
+    },
+    {
+      "id": "1527005905525145687",
+      "name": "🔊・General",
+      "position": 17
+    },
+    {
+      "id": "1527005905525145689",
+      "name": "🔐・Private",
+      "position": 19
+    }
+  ],
+  "members": [
+    {
+      "id": "0",
+      "username": "Seylo",
+      "discriminator": "0000",
+      "avatar": null,
+      "status": "online",
+      "avatar_url": "https://cdn.discordapp.com/widget-avatars/sX4khkzjK_tpP6K9otD2sHT_dpMgfAM82-5scfCFF8c/B-n4sdkWUnWttje-QPP7gMGM0-MG6gOMkiKKzAgigbYUYez1P6KlPlf5A_IxRCma6IxCEPK3NiF5SkNoZ7dgdD9UzxYL-_VFd8dTqcJD-VzyoIW_QOrq8EV7GWk5Ds9grjBTZe5Wk3F0vyc"
+    }
+  ]
 }
