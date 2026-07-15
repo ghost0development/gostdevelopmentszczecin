@@ -5,7 +5,14 @@ import Link from "next/link";
 import { Ghost, Mail, Phone, MapPin } from "lucide-react";
 
 export const metadata = {
-  title: "Kontakt | Ghost Development",
+  title: "Kontakt | Ghost Development — Dedykowane launchery Minecraft",
+  description: "Skontaktuj się z Ghost Development. Tworzymy dedykowane launchery desktopowe dla serwerów Minecraft. Umów bezpłatną konsultację we Szczecinie.",
+  openGraph: {
+    title: "Kontakt | Ghost Development",
+    description: "Skontaktuj się z nami. Bezpłatna konsultacja, wycena projektu, spotkanie stacjonarne we Szczecinie.",
+    type: "website",
+    locale: "pl_PL",
+  },
 };
 
 function EmailCard() {

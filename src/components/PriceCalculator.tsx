@@ -222,10 +222,10 @@ export default function PriceCalculator() {
               <div className="mt-4 p-3 border border-border-strong rounded-sm">
                 <div className="flex items-center gap-2 mb-1">
                   <Star className="w-3.5 h-3.5 text-accent fill-accent" />
-                  <span className="mono text-[9px] text-muted uppercase tracking-[0.2em]">Ocena Google = zniżka</span>
+                  <span className="mono text-[9px] text-muted uppercase tracking-[0.2em]">Podziel się opinią</span>
                 </div>
                 <p className="text-[12px] text-muted leading-relaxed">
-                  Oceń nas na Google po realizacji i zgarnij <span className="text-accent font-semibold">1% zniżki</span> na następny projekt.
+                  Podziel się swoim doświadczeniem z innymi właścicielami serwerów. Po zakończeniu projektu otrzymasz <span className="text-accent font-semibold">kod rabatowy 1%</span> na kolejne zlecenie.
                 </p>
               </div>
             </div>

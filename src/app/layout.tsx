@@ -39,8 +39,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Ghost Development",
-  description: "Projektujemy i budujemy dedykowane launchery desktopowe dla serwerów Minecraft.",
-  url: "https://ghostdev.pl",
+  description: "Projektujemy i budujemy dedykowane launchery desktopowe dla serwerów Minecraft. Od projektu po wdrożenie i opiekę techniczną.",
+  url: "https://ghost0development.github.io/gostdevelopmentszczecin",
   email: "kontakt.gd.Bartoszosiej@outlook.com",
   address: {
     "@type": "PostalAddress",
@@ -54,6 +54,33 @@ const jsonLd = {
   serviceType: ["Dedykowany launcher", "Integracja z serwerem", "Wsparcie techniczne"],
   areaServed: "PL",
   foundingDate: "2024",
+  sameAs: [],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Usługi Ghost Development",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Dedykowany launcher do Minecrafta",
+          description: "Projektowanie i budowa dedykowanego launchera desktopowego dla serwera Minecraft. Electron, Java, Kotlin.",
+        },
+        price: "1500-4000 PLN",
+        priceCurrency: "PLN",
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Wsparcie techniczne launchera",
+          description: "Aktualizacje, poprawki, nowe funkcje. Responsywność poniżej 24h.",
+        },
+        price: "100-200 PLN/mies.",
+        priceCurrency: "PLN",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
