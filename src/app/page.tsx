@@ -5,7 +5,6 @@ import TechStack from "@/components/TechStack";
 import CaseStudy from "@/components/CaseStudy";
 import Process from "@/components/Process";
 import PriceCalculator from "@/components/PriceCalculator";
-import Testimonials from "@/components/Testimonials";
 import DiscordWidget from "@/components/DiscordWidget";
 import InteractiveDemo from "@/components/InteractiveDemo";
 import FAQ from "@/components/FAQ";
@@ -23,7 +22,6 @@ export default function Home() {
       <InteractiveDemo />
       <Process />
       <PriceCalculator />
-      <Testimonials />
       <DiscordWidget />
       <FAQ />
       <CTA />
