@@ -82,7 +82,7 @@ export default function DiscordWidget() {
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg overflow-hidden border border-border-strong flex-shrink-0">
                   <Image
-                    src="/discord-logo.jpeg"
+                    src="/logo.jpeg"
                     alt="Ghost Development"
                     width={40}
                     height={40}
