@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Ghost } from "lucide-react";
 
 export const metadata = {
-  title: "Rezerwacja spotkania | Ghost Development — Launcher Minecraft Szczecin",
-  description: "Umów bezpłatną konsultację lub wycenę projektu launchera Minecraft. Wybierz termin spotkania online lub stacjonarnego w Szczecinie.",
+  title: "Rezerwacja spotkania — Umów konsultację | Ghost Development Szczecin",
+  description: "Umów bezpłatną konsultację (15-30 min) lub wycenę projektu launchera Minecraft, strony internetowej lub aplikacji desktopowej w Ghost Development Szczecin.",
 };
 
 export default function RezerwacjaPage() {

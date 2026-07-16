@@ -114,20 +114,22 @@ export default function Hero() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-start">
             {/* Left: Big text */}
             <div className="lg:col-span-8">
-              <div className="mb-2">
-                <TextReveal
-                  text="Tworzymy launchery,"
-                  className="text-[clamp(2.25rem,7.25vw,6.75rem)] leading-[0.92] font-bold tracking-[-0.03em] block"
-                  delay={2}
-                />
-              </div>
-              <div className="mb-6 sm:mb-8">
-                <TextReveal
-                  text="które działają."
-                  className="text-[clamp(2.25rem,7.25vw,6.75rem)] leading-[0.92] font-bold tracking-[-0.03em] accent block"
-                  delay={2.4}
-                />
-              </div>
+              <h1>
+                <span className="mb-2 block">
+                  <TextReveal
+                    text="Tworzymy launchery,"
+                    className="text-[clamp(2.25rem,7.25vw,6.75rem)] leading-[0.92] font-bold tracking-[-0.03em] block"
+                    delay={2}
+                  />
+                </span>
+                <span className="mb-6 sm:mb-8 block">
+                  <TextReveal
+                    text="które działają."
+                    className="text-[clamp(2.25rem,7.25vw,6.75rem)] leading-[0.92] font-bold tracking-[-0.03em] accent block"
+                    delay={2.4}
+                  />
+                </span>
+              </h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 16 }}

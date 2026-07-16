@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Ghost, Mail, Phone, MapPin } from "lucide-react";
 
 export const metadata = {
-  title: "Kontakt | Ghost Development — Launcher Minecraft Szczecin",
-  description: "Skontaktuj się z Ghost Development w Szczecinie. Tworzymy dedykowane launchery desktopowe dla serwerów Minecraft. Umów bezpłatną konsultację. Tel: +48 508 302 053",
+  title: "Kontakt — Ghost Development Szczecin | Launcher Minecraft, Strony WWW",
+  description: "Kontakt z Ghost Development w Szczecinie: telefon +48 508 302 053, email kontakt.gd.Bartoszosiej@outlook.com. Tworzymy launchery Minecraft, strony internetowe, aplikacje desktopowe. Bezpłatna konsultacja.",
   openGraph: {
     title: "Kontakt | Ghost Development — Szczecin",
     description: "Skontaktuj się z nami. Bezpłatna konsultacja, wycena projektu, spotkanie stacjonarne w Szczecinie.",

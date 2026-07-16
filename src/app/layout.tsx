@@ -11,33 +11,42 @@ import { SoundProvider } from "@/components/Sound";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
+const siteUrl = "https://ghost0development.github.io/gostdevelopmentszczecin";
+
 export const metadata: Metadata = {
-  title: "Ghost Development — Dedykowane launchery do Minecrafta | Szczecin",
+  title: {
+    default: "Ghost Development — Launchery Minecraft, Strony WWW, Aplikacje desktopowe | Szczecin",
+    template: "%s | Ghost Development Szczecin",
+  },
   description:
-    "Tworzymy dedykowane launchery desktopowe dla serwerów Minecraft w Szczecinie. Electron, Java, Kotlin. Od 1500 PLN. Bezpłatna konsultacja.",
+    "Ghost Development Szczecin — tworzymy launchery Minecraft (od 1500 PLN), strony internetowe, aplikacje desktopowe i programy. Electron, Java, Kotlin, React. Bezpłatna konsultacja.",
   keywords: [
     "launcher minecraft", "dedykowany launcher", "launcher do serwera", "minecraft launcher Szczecin",
     "programista minecraft", "electron minecraft", "launcher desktopowy", "serwer minecraft launcher",
     "ghost development", "Szczecin", "tworzenie launcherów", "minecraft plugin", "integracja serwera minecraft",
-    "launcher java", "launcher kotlin", "aplikacja desktopowa minecraft",
+    "launcher java", "launcher kotlin", "aplikacja desktopowa", "strona internetowa Szczecin",
+    "tworzenie stron", "programy na zamówienie", "firma programistyczna Szczecin",
   ],
   authors: [{ name: "Ghost Development" }],
   openGraph: {
-    title: "Ghost Development — Dedykowane launchery do Minecrafta | Szczecin",
-    description: "Tworzymy dedykowane launchery desktopowe dla serwerów Minecraft. Szczecin. Od 1500 PLN.",
+    title: "Ghost Development — Launchery Minecraft, Strony WWW, Aplikacje desktopowe | Szczecin",
+    description: "Tworzymy launchery Minecraft, strony internetowe, aplikacje desktopowe i programy. Szczecin. Od 1500 PLN.",
     type: "website",
     locale: "pl_PL",
     siteName: "Ghost Development",
-    url: "https://ghost0development.github.io/gostdevelopmentszczecin",
+    url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ghost Development — Dedykowane launchery do Minecrafta | Szczecin",
-    description: "Tworzymy dedykowane launchery desktopowe dla serwerów Minecraft. Szczecin. Od 1500 PLN.",
+    title: "Ghost Development — Launchery Minecraft, Strony WWW, Aplikacje desktopowe | Szczecin",
+    description: "Launchery Minecraft, strony internetowe, aplikacje desktopowe. Szczecin. Od 1500 PLN.",
   },
   robots: {
     index: true,
     follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
   },
   other: {
     "geo.region": "PL-32",
@@ -47,18 +56,18 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
+const localBusiness = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://ghost0development.github.io/gostdevelopmentszczecin",
+  "@id": `${siteUrl}#business`,
   name: "Ghost Development",
-  alternateName: "ghostdev",
-  description: "Tworzymy dedykowane launchery desktopowe dla serwerów Minecraft. Electron, Java, Kotlin. Od projektu po wdrożenie i opiekę techniczną.",
-  url: "https://ghost0development.github.io/gostdevelopmentszczecin",
+  alternateName: ["ghostdev", "Ghost Dev", "Ghost Development Szczecin"],
+  description: "Firma programistyczna w Szczecinie. Tworzymy launchery Minecraft, strony internetowe, aplikacje desktopowe i programy na zamówienie. Electron, Java, Kotlin, React.",
+  url: siteUrl,
   email: "kontakt.gd.Bartoszosiej@outlook.com",
   telephone: "+48508302053",
-  image: "https://ghost0development.github.io/gostdevelopmentszczecin/logo.jpeg",
-  logo: "https://ghost0development.github.io/gostdevelopmentszczecin/logo.jpeg",
+  image: `${siteUrl}/logo.jpeg`,
+  logo: `${siteUrl}/logo.jpeg`,
   address: {
     "@type": "PostalAddress",
     streetAddress: "ul. Asnyka 3/22",
@@ -80,16 +89,21 @@ const jsonLd = {
       closes: "17:00",
     },
   ],
-  priceRange: "1500-4000 PLN",
+  priceRange: "1500-6000 PLN",
   paymentAccepted: "Gotówka, przelew, faktura VAT",
   currenciesAccepted: "PLN",
-  serviceType: ["Dedykowany launcher", "Integracja z serwerem", "Wsparcie techniczne"],
-  areaServed: {
-    "@type": "Country",
-    name: "Polska",
-  },
+  areaServed: [
+    { "@type": "City", name: "Szczecin" },
+    { "@type": "State", name: "Zachodniopomorskie" },
+    { "@type": "Country", name: "Polska" },
+  ],
   foundingDate: "2026-02-09",
   sameAs: [],
+  knowsAbout: [
+    "tworzenie launcherów Minecraft", "Electron", "Java", "Kotlin", "React", "TypeScript",
+    "aplikacje desktopowe", "strony internetowe", "programy na zamówienie",
+    "integracja z serwerem Minecraft", "REST API", "WebSocket",
+  ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Usługi Ghost Development",
@@ -108,24 +122,167 @@ const jsonLd = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Integracja z ekosystemem serwera Minecraft",
-          description: "REST API, WebSocket, RCON. Automatyczna synchronizacja z backendem serwera.",
+          name: "Strona internetowa",
+          description: "Projektowanie i tworzenie stron internetowych — landing page, strony firmowe, sklepy internetowe.",
         },
-        price: "w cenie launchera",
+        price: "1500-5000 PLN",
         priceCurrency: "PLN",
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Wsparcie techniczne launchera",
+          name: "Aplikacja desktopowa",
+          description: "Natywne aplikacje desktopowe na Windows, macOS i Linux. Electron, Kotlin, Java.",
+        },
+        price: "2000-6000 PLN",
+        priceCurrency: "PLN",
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Pluginy, boty i programy",
+          description: "Dedykowane pluginy Minecraft, boty Discord, skrypty i narzędzia programistyczne.",
+        },
+        price: "1500-4000 PLN",
+        priceCurrency: "PLN",
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Wsparcie techniczne",
           description: "Aktualizacje, poprawki, nowe funkcje. Responsywność poniżej 24h.",
         },
-        price: "100-200 PLN/mies.",
+        price: "100-300 PLN/mies.",
         priceCurrency: "PLN",
       },
     ],
   },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Ile kosztuje dedykowany launcher do Minecrafta?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Dedykowany launcher do Minecrafta kosztuje od 1500 PLN za wersję podstawową, 2500 PLN za zaawansowaną i 4000 PLN za premium. Cena obejmuje integrację z serwerem, custom UI i system aktualizacji.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Ile trwa realizacja launchera Minecraft?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Realizacja launchera trwa standardowo 2–4 tygodnie, zależnie od złożoności projektu. Przed rozpoczęciem podajemy dokładny harmonogram.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Ile kosztuje strona internetowa w Szczecinie?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Strona internetowa w Ghost Development kosztuje od 1500 PLN (landing page), 3000 PLN (strona firmowa) do 5000 PLN (e-commerce). Cena obejmuje responsywny design, SEO i formularz kontaktowy.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Ile kosztuje aplikacja desktopowa?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Aplikacja desktopowa w Ghost Development kosztuje od 2000 PLN (narzędzie), 4000 PLN (zaawansowana) do 6000 PLN (system). Tworzymy aplikacje na Windows, macOS i Linux.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Co to jest Ghost Development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ghost Development to firma programistyczna z Szczecina, która tworzy launchery Minecraft, strony internetowe, aplikacje desktopowe i programy. Firma została założona w lutym 2026 roku.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Gdzie znajduje się Ghost Development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ghost Development znajduje się w Szczecinie, ul. Asnyka 3/22, 71-526. Firma świadczy usługi dla klientów z całej Polski.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Jakie technologie używa Ghost Development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ghost Development używa Electron, Java, Kotlin, TypeScript, React, Node.js i Python. Technologie dobieramy indywidualnie do projektu.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Czy Ghost Development tworzy strony internetowe?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Tak, Ghost Development tworzy strony internetowe — landing page, strony firmowe z CMS i sklepy internetowe. Ceny zaczynają się od 1500 PLN.",
+      },
+    },
+  ],
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "Jak zamówić dedykowany launcher do Minecrafta",
+  description: "Krok po kroku: jak zamówić dedykowany launcher desktopowy dla serwera Minecraft w Ghost Development.",
+  step: [
+    {
+      "@type": "HowToStep",
+      name: "Brief i analiza",
+      text: "Umów bezpłatną konsultację. Rozmawiamy o Twoim serwerze, poznajemy infrastrukturę i graczy. Na tej podstawie planujemy architekturę launchera. Trwa 1–2 dni.",
+      position: 1,
+    },
+    {
+      "@type": "HowToStep",
+      name: "Projekt UI/UX",
+      text: "Projektujemy interfejs launchera: wireframe, mockup hi-fi, akceptacja. Dwa darmowe iteracje w cenie. Trwa 3–5 dni.",
+      position: 2,
+    },
+    {
+      "@type": "HowToStep",
+      name: "Realizacja",
+      text: "Programujemy launcher. Cotygodniowe demo postępów. Pełna przejrzystość — masz dostęp do repozytorium. Trwa 10–18 dni.",
+      position: 3,
+    },
+    {
+      "@type": "HowToStep",
+      name: "Testing i wdrożenie",
+      text: "Testy na prawdziwych graczach. Poprawki. Wdrożenie na serwer. Monitorowanie stabilności. Trwa 2–3 dni.",
+      position: 4,
+    },
+    {
+      "@type": "HowToStep",
+      name: "Opieka techniczna",
+      text: "Po wdrożeniu oferujemy opiekę techniczną za 150 PLN/mies. Aktualizacje, poprawki, nowe funkcje. Responsywność poniżej 24h.",
+      position: 5,
+    },
+  ],
+  totalTime: "PT4W",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Strona główna", item: siteUrl },
+    { "@type": "ListItem", position: 2, name: "Cennik", item: `${siteUrl}/cennik` },
+    { "@type": "ListItem", position: 3, name: "Kontakt", item: `${siteUrl}/kontakt` },
+    { "@type": "ListItem", position: 4, name: "Portfolio", item: `${siteUrl}/portfolio` },
+    { "@type": "ListItem", position: 5, name: "Rezerwacja", item: `${siteUrl}/rezerwacja` },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -134,7 +291,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
       </head>
       <body className="mesh">
