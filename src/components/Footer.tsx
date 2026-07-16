@@ -28,7 +28,7 @@ export default function Footer() {
             <div className="flex flex-col gap-2">
               <Link href="/" className="text-[13px] text-muted hover:text-text transition-colors">Strona główna</Link>
               <Link href="/#funkcje" className="text-[13px] text-muted hover:text-text transition-colors">Usługi</Link>
-              <Link href="/#cennik" className="text-[13px] text-muted hover:text-text transition-colors">Cennik</Link>
+              <Link href="/cennik" className="text-[13px] text-muted hover:text-text transition-colors">Cennik</Link>
               <Link href="/rezerwacja" className="text-[13px] text-muted hover:text-text transition-colors">Rezerwacja</Link>
               <Link href="/kontakt" className="text-[13px] text-muted hover:text-text transition-colors">Kontakt</Link>
             </div>

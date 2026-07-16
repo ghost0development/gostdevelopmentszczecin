@@ -8,7 +8,7 @@ import Link from "next/link";
 const navLinks = [
   { href: "/#co-robimy", label: "Usługi" },
   { href: "/#proces", label: "Proces" },
-  { href: "/#cennik", label: "Cennik" },
+  { href: "/cennik", label: "Cennik", isPage: true },
   { href: "/portfolio", label: "Portfolio", isPage: true },
 ];
 
