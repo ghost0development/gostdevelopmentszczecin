@@ -54,3 +54,21 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Ping IndexNow
+        if: success()
+        run: |
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "ghost0development.github.io",
+              "key": "a2ec0f73674a203f81e56072a90381e8",
+              "keyLocation": "https://ghost0development.github.io/gostdevelopmentszczecin/a2ec0f73674a203f81e56072a90381e8.txt",
+              "urlList": [
+                "https://ghost0development.github.io/gostdevelopmentszczecin/",
+                "https://ghost0development.github.io/gostdevelopmentszczecin/cennik",
+                "https://ghost0development.github.io/gostdevelopmentszczecin/kontakt",
+                "https://ghost0development.github.io/gostdevelopmentszczecin/portfolio",
+                "https://ghost0development.github.io/gostdevelopmentszczecin/rezerwacja"
+              ]
+            }' && echo "IndexNow: notified" || echo "IndexNow: failed (non-critical)"
