@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/#co-robimy", label: "Usługi" },
   { href: "/#proces", label: "Proces" },
   { href: "/#cennik", label: "Cennik" },
+  { href: "/portfolio", label: "Portfolio", isPage: true },
 ];
 
 export default function Navbar() {
@@ -101,16 +102,28 @@ export default function Navbar() {
             className="fixed inset-x-0 top-16 z-40 mx-4 md:hidden"
           >
             <div className="bg-surface border border-border-strong rounded-xl p-4 backdrop-blur-xl">
-              {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => scrollTo(link.href)}
-                  className="w-full text-left px-4 py-3 text-sm text-muted hover:text-text hover:bg-white/[0.02] rounded-lg transition-colors flex items-center justify-between"
-                >
-                  {link.label}
-                  <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100" />
-                </button>
-              ))}
+              {navLinks.map((link) =>
+                link.href.startsWith("/#") ? (
+                  <button
+                    key={link.href}
+                    onClick={() => scrollTo(link.href)}
+                    className="w-full text-left px-4 py-3 text-sm text-muted hover:text-text hover:bg-white/[0.02] rounded-lg transition-colors flex items-center justify-between"
+                  >
+                    {link.label}
+                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100" />
+                  </button>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="w-full text-left px-4 py-3 text-sm text-muted hover:text-text hover:bg-white/[0.02] rounded-lg transition-colors flex items-center justify-between"
+                  >
+                    {link.label}
+                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100" />
+                  </Link>
+                )
+              )}
               <div className="mt-2 pt-2 border-t border-border space-y-1">
                 <Link
                   href="/rezerwacja"
