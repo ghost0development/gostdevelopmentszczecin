@@ -48,6 +48,12 @@ export const metadata: Metadata = {
     "max-image-preview": "large",
     "max-video-preview": -1,
   },
+  alternates: {
+    canonical: siteUrl,
+    languages: {
+      "pl": siteUrl,
+    },
+  },
   other: {
     "geo.region": "PL-32",
     "geo.placename": "Szczecin",
@@ -285,6 +291,48 @@ const breadcrumbSchema = {
   ],
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Ghost Development",
+  alternateName: "ghostdev",
+  url: siteUrl,
+  inLanguage: "pl",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${siteUrl}/?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Ghost Development",
+  alternateName: ["ghostdev", "Ghost Dev"],
+  url: siteUrl,
+  logo: `${siteUrl}/logo.jpeg`,
+  image: `${siteUrl}/logo.jpeg`,
+  email: "kontakt.gd.Bartoszosiej@outlook.com",
+  telephone: "+48508302053",
+  foundingDate: "2026-02-09",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "ul. Asnyka 3/22",
+    addressLocality: "Szczecin",
+    addressRegion: "Zachodniopomorskie",
+    postalCode: "71-526",
+    addressCountry: "PL",
+  },
+  sameAs: [],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+48508302053",
+    contactType: "customer service",
+    availableLanguage: ["Polish", "English"],
+  },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pl" className={`${geistSans.variable} ${geistMono.variable}`}>
@@ -304,6 +352,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body className="mesh">

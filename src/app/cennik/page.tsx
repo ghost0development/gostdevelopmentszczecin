@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Cennik — Launchery, Strony, Aplikacje desktopowe | Ghost Development Szczecin",
   description:
     "Cennik usług Ghost Development: launchery Minecraft od 1500 PLN, strony internetowe od 1500 PLN, aplikacje desktopowe od 2000 PLN, programy i pluginy od 1500 PLN.",
+  alternates: {
+    canonical: "https://ghost0development.github.io/gostdevelopmentszczecin/cennik",
+  },
   openGraph: {
     title: "Cennik | Ghost Development — Szczecin",
     description: "Launchery od 1500 PLN, strony od 1500 PLN, aplikacje desktopowe od 2000 PLN.",
