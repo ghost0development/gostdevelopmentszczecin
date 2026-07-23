@@ -138,15 +138,15 @@ export default function LinuxHelpContent() {
               <div className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                 <div>
-                  <span className="text-sm font-medium block">Obszerne problemy</span>
+                  <span className="text-sm font-medium block">Standardowe problemy</span>
                   <span className="text-[13px] text-muted/50">50 PLN/h — stała stawka, bez niespodzianek</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <AlertTriangle className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                 <div>
-                  <span className="text-sm font-medium block">Prostsze problemy</span>
-                  <span className="text-[13px] text-muted/50">Cena indywidualna — często niższa niż stawka godzinowa</span>
+                  <span className="text-sm font-medium block">Obszerne problemy</span>
+                  <span className="text-[13px] text-muted/50">Cena indywidualna — wycena po analizie</span>
                 </div>
               </div>
             </div>
@@ -278,7 +278,7 @@ export default function LinuxHelpContent() {
         {/* FAQ-like notes */}
         <div className="max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
           {[
-            { q: "Szybkie problemy", a: "Jeśli problem da się rozwiązać w kilka minut — naliczam stałą, niższą cenę. Nie zawsze musi być stawka godzinowa." },
+            { q: "Szybkie problemy", a: "Standardowe problemy — 50 PLN/h. Obszerne, złożone sprawy — cena indywidualna po analizie problemu." },
             { q: "Konsultacja zdalna", a: "Możemy łączyć się przez SSH, screen share lub po prostu rozmawiać. Wybierasz formę, która Ci pasuje." },
             { q: "Dokumentacja", a: "Po soluciónie dostajesz krótką dokumentację: co było zrobione i jak działa. Żebyś w przyszłości wiedział co i jak." },
             { q: "Czas reakcji", a: "Odpowiadam w ciągu 24h. Pilne problemy — staram się reagować szybciej." },

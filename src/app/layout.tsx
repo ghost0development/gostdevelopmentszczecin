@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Ghost Development Szczecin",
   },
   description:
-    "Ghost Development Szczecin — tworzymy launchery Minecraft (od 1500 PLN), strony internetowe, aplikacje desktopowe i programy. Linux Help — pomoc z Linuxem od 50 PLN/h. Electron, Java, Kotlin, React. Bezpłatna konsultacja.",
+    "Ghost Development Szczecin — tworzymy launchery Minecraft (od 1500 PLN), strony internetowe, aplikacje desktopowe i programy. Linux Help — pomoc z Linuxem 50 PLN/h. Electron, Java, Kotlin, React. Bezpłatna konsultacja.",
   keywords: [
     "launcher minecraft", "dedykowany launcher", "launcher do serwera", "minecraft launcher Szczecin",
     "programista minecraft", "electron minecraft", "launcher desktopowy", "serwer minecraft launcher",
@@ -171,7 +171,7 @@ const localBusiness = {
         itemOffered: {
           "@type": "Service",
           name: "Linux Help",
-          description: "Pomoc z każdym problemem Linux — konfiguracja, bezpieczeństwo, skrypty, naprawa. 50 PLN/h za obszerne problemy.",
+          description: "Pomoc z każdym problemem Linux — konfiguracja, bezpieczeństwo, skrypty, naprawa. 50 PLN/h, obszerne problemy — cena indywidualna.",
         },
         price: "50 PLN/h",
         priceCurrency: "PLN",
@@ -253,7 +253,7 @@ const faqSchema = {
       name: "Ile kosztuje pomoc z Linuxem?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Linux Help kosztuje 50 PLN/h za obszerne problemy. Prostsze problemy — cena indywidualna, often niższa niż stawka godzinowa. Nie obejmuje administrowania bazami danych i serwerami produkcyjnymi.",
+        text: "Linux Help kosztuje 50 PLN/h za standardowe problemy. Obszerne, złożone sprawy — cena indywidualna po analizie. Nie obejmuje administrowania bazami danych i serwerami produkcyjnymi.",
       },
     },
   ],

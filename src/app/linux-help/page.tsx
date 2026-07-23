@@ -4,7 +4,7 @@ import LinuxHelpContent from "@/components/LinuxHelpContent";
 export const metadata: Metadata = {
   title: "Linux Help — Pomoc z Linuxem 50 PLN/h | Ghost Development Szczecin",
   description:
-    "Linux Help od Ghost Development: pomoc z każdym problemem Linux — konfiguracja, bezpieczeństwo, skrypty, naprawa. 50 PLN/h za obszerne problemy, cena indywidualna za proste sprawy.",
+    "Linux Help od Ghost Development: pomoc z każdym problemem Linux — konfiguracja, bezpieczeństwo, skrypty, naprawa. 50 PLN/h, obszerne problemy — cena indywidualna.",
   alternates: {
     canonical: "https://ghost0development.github.io/gostdevelopmentszczecin/linux-help",
   },
