@@ -47,7 +47,7 @@ export default function CTA() {
               transition={{ duration: 0.4, delay: 0.2 }}
             >
               <span className="mono text-[10px] text-muted uppercase tracking-[0.3em] block mb-6">
-                Gotowy?
+                Potrzebujesz pomocy?
               </span>
             </motion.div>
 
@@ -59,7 +59,7 @@ export default function CTA() {
                 transition={{ duration: 0.6, delay: 0.3, ease: [0.33, 1, 0.68, 1] }}
                 className="text-[clamp(2.5rem,5vw,5.5rem)] font-bold tracking-[-0.04em] leading-[0.95]"
               >
-                Zmień swój serwer
+                Masz problem
               </motion.h2>
             </div>
             <div className="overflow-hidden mb-8">
@@ -70,7 +70,7 @@ export default function CTA() {
                 transition={{ duration: 0.6, delay: 0.4, ease: [0.33, 1, 0.68, 1] }}
                 className="text-[clamp(2.5rem,5vw,5.5rem)] font-bold tracking-[-0.04em] leading-[0.95]"
               >
-                <span className="accent">już dziś.</span>
+                <span className="accent">z Linuxem?</span>
               </motion.h2>
             </div>
 
@@ -81,8 +81,8 @@ export default function CTA() {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="text-muted text-[15px] leading-relaxed max-w-md mb-10"
             >
-              Pierwsza konsultacja jest bezpłatna. Opowiedz nam o swoim
-              serwerze, a my pokażemy, co możemy dla Ciebie zrobić.
+              Napisz — pomożemy zdalnie lub stacjonarnie w Szczecinie.
+              Pierwsza diagnostyka bezpłatna.
             </motion.p>
 
             <motion.div
@@ -93,21 +93,23 @@ export default function CTA() {
               className="flex flex-col sm:flex-row items-start gap-3"
             >
               <MagneticButton>
-                <Link
-                  href="/rezerwacja"
+                <a
+                  href="https://wa.me/48508302053"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group/btn relative inline-flex items-center gap-3 px-8 py-4 bg-accent text-bg text-sm font-semibold rounded-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(200,255,0,0.25)]"
                 >
                   <span className="absolute inset-0 bg-white/0 group-hover/btn:bg-white/10 transition-colors duration-300" />
-                  <span className="relative z-10">Umów spotkanie</span>
+                  <span className="relative z-10">WhatsApp: 508 302 053</span>
                   <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 relative z-10" />
-                </Link>
+                </a>
               </MagneticButton>
               <MagneticButton>
                 <Link
                   href="/kontakt"
                   className="group/btn relative inline-flex items-center gap-3 px-8 py-4 text-sm text-muted border border-border rounded-sm hover:border-accent/30 hover:text-text transition-all duration-300"
                 >
-                  <span>Zamów launcher</span>
+                  <span>Formularz kontaktowy</span>
                   <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" />
                 </Link>
               </MagneticButton>

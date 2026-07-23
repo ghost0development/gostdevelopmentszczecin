@@ -7,31 +7,31 @@ import { GlowCard } from "@/components/FX";
 const services = [
   {
     num: "01",
+    title: "Linux Help — diagnostyka i naprawa",
+    desc: "System nie wstaje po aktualizacji? Konflikty pakietów, uszkodzone partycje, problemy ze sterownikami. Naprawiamy Linuxa zdalnie lub stacjonarnie. 50 PLN/h.",
+    tech: ["Arch", "Kali", "Ubuntu", "Debian"],
+    detail: "Naprawa bez reinstalacji. Odbudowa drzew zależności, repair partycji, konfiguracja systemu.",
+  },
+  {
+    num: "02",
+    title: "Steam Deck i gaming",
+    desc: "SteamOS, dual boot, konflikty z grami, aktualizacje systemu. Steam Deck to miniaturowy PC z Arch Linuxem — naprawiamy tak samo jak każdy inny Linux.",
+    tech: ["SteamOS", "Arch", "Proton"],
+    detail: "Naprawa SteamOS po aktualizacjach, konfiguracja dual boot, diagnostyka gier.",
+  },
+  {
+    num: "03",
     title: "Dedykowany launcher desktopowy",
-    desc: "Aplikacja desktopowa stworzona od zera pod Twój serwera. Nie używamy szablonów — każdy element projektujemy indywidualnie. Od UI po logikę aktualizacji.",
+    desc: "Aplikacja desktopowa stworzona od zera pod Twój serwer. Nie używamy szablonów — każdy element projektujemy indywidualnie. Od UI po logikę aktualizacji.",
     tech: ["Electron", "Java", "Kotlin"],
     detail: "Aplikacja native, nie webview. Działa offline, aktualizuje się w tle.",
   },
   {
-    num: "02",
-    title: "Integracja z ekosystemem serwera",
+    num: "04",
+    title: "Integracja i systemy",
     desc: "Launcher komunikuje się z Twoim API. Pobiera status serwera, listę graczy, motd, resourcepacki. Automatycznie synchronizuje modyfikacje i pluginy.",
     tech: ["REST API", "WebSocket", "RCON"],
     detail: "Pełna synchronizacja z Twoim backendem. Zero ręcznej konfiguracji.",
-  },
-  {
-    num: "03",
-    title: "System zarządzania wersjami",
-    desc: "Wiele wersji launchera? Żaden problem. Canal/Dev/Prod. A/B testing. Stopniowe wdrożenia. Gracze zawsze dostają właściwą wersję.",
-    tech: ["Auto-update", "Canary", "Delta"],
-    detail: "Automatyczne aktualizacje bez przestojów. Gracz nawet nie zauważa.",
-  },
-  {
-    num: "04",
-    title: "Bezpieczeństwo i autoryzacja",
-    desc: "Whitelist, banlisty, integracja z LuckPerms. Szyfrowane połączenia. Weryfikacja integralności plików. Ochrona przed cheatami i modyfikacjami.",
-    tech: ["Auth", "AES-256", "Checksum"],
-    detail: "Twoi gracze są bezpieczni. Twoje pliki są chronione.",
   },
 ];
 
@@ -57,9 +57,9 @@ export default function WhatWeDo() {
             <span className="mono text-[10px] text-muted uppercase tracking-[0.3em]">Co robimy</span>
           </div>
           <h2 className="text-[clamp(2rem,4.5vw,4rem)] font-bold tracking-[-0.035em] leading-[1.05] max-w-2xl">
-            Nie robimy &ldquo;stron internetowych&rdquo;.
+            Naprawiamy Linux.
             <br />
-            <span className="text-muted">Budujemy narzędzia.</span>
+            <span className="text-muted">I tworzymy launchery.</span>
           </h2>
         </motion.div>
 

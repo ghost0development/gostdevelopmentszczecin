@@ -17,9 +17,9 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-[13px] text-muted max-w-sm leading-relaxed">
-              Ghost Development — tworzymy dedykowane launchery desktopowe
-              dla serwerów Minecraft. Od projektu po wdrożenie i opiekę
-              techniczną.
+              Ghost Development — naprawa Linux, Steam Deck, diagnostyka
+              software w Szczecinie. Zdalnie lub stacjonarnie. Tworzymy
+              również launchery desktopowe i aplikacje.
             </p>
           </div>
 
@@ -27,9 +27,9 @@ export default function Footer() {
             <span className="mono text-[9px] text-muted/30 uppercase tracking-[0.3em] block mb-3">Nawigacja</span>
             <div className="flex flex-col gap-2">
               <Link href="/" className="text-[13px] text-muted hover:text-text transition-colors">Strona główna</Link>
-              <Link href="/#funkcje" className="text-[13px] text-muted hover:text-text transition-colors">Usługi</Link>
+              <Link href="/linux-help" className="text-[13px] text-muted hover:text-text transition-colors">Linux Help</Link>
+              <Link href="/#co-robimy" className="text-[13px] text-muted hover:text-text transition-colors">Usługi</Link>
               <Link href="/cennik" className="text-[13px] text-muted hover:text-text transition-colors">Cennik</Link>
-              <Link href="/rezerwacja" className="text-[13px] text-muted hover:text-text transition-colors">Rezerwacja</Link>
               <Link href="/kontakt" className="text-[13px] text-muted hover:text-text transition-colors">Kontakt</Link>
             </div>
           </div>

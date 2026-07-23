@@ -117,14 +117,14 @@ export default function Hero() {
               <h1>
                 <span className="mb-2 block">
                   <TextReveal
-                    text="Tworzymy launchery,"
+                    text="Naprawiamy Linux."
                     className="text-[clamp(2.25rem,7.25vw,6.75rem)] leading-[0.92] font-bold tracking-[-0.03em] block"
                     delay={2}
                   />
                 </span>
                 <span className="mb-6 sm:mb-8 block">
                   <TextReveal
-                    text="które działają."
+                    text="I tworzymy launchery."
                     className="text-[clamp(2.25rem,7.25vw,6.75rem)] leading-[0.92] font-bold tracking-[-0.03em] accent block"
                     delay={2.4}
                   />
@@ -137,10 +137,10 @@ export default function Hero() {
                 transition={{ duration: 0.5, delay: 2.8 }}
                 className="text-muted text-[15px] leading-relaxed max-w-lg"
               >
-                Nie szablonowe solutiony. Każdy launcher budujemy od zera —
-                pod Twój serwera, Twoich graczy, Twoje zasady. Electron, Java
-                lub Kotlin. Wybieramy technologię, która najlepiej rozwiąże
-                Twój problem.
+                Diagnostyka i naprawa oprogramowania — Linux, Steam Deck,
+                Windows. Nie formatujemy od razu. Zdalnie (RustDesk) lub
+                stacjonarnie w Szczecinie. Tworzymy również launchery
+                desktopowe i aplikacje.
               </motion.p>
             </div>
 
@@ -157,13 +157,13 @@ export default function Hero() {
 
                 <div className="relative z-10">
                   <span className="mono text-[9px] text-muted uppercase tracking-[0.3em] block mb-1.5">Czas realizacji</span>
-                  <span className="text-lg font-semibold">2–4 tygodnie</span>
+                  <span className="text-lg font-semibold">Do 24h</span>
                 </div>
                 <div className="h-px bg-border relative z-10" />
                 <div className="relative z-10">
-                  <span className="mono text-[9px] text-muted uppercase tracking-[0.3em] block mb-2">Technologie</span>
+                  <span className="mono text-[9px] text-muted uppercase tracking-[0.3em] block mb-2">Systemy</span>
                   <div className="flex flex-wrap gap-1.5">
-                    {["Electron", "Java", "Kotlin", "TypeScript", "React"].map((t, i) => (
+                    {["Arch", "Kali", "Ubuntu", "Debian", "SteamOS", "Windows"].map((t, i) => (
                       <motion.span
                         key={t}
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -178,8 +178,8 @@ export default function Hero() {
                 </div>
                 <div className="h-px bg-border relative z-10" />
                 <div className="relative z-10">
-                  <span className="mono text-[9px] text-muted uppercase tracking-[0.3em] block mb-1.5">Start od</span>
-                  <span className="text-lg font-semibold">1 500 <span className="text-muted text-sm">PLN netto</span></span>
+                  <span className="mono text-[9px] text-muted uppercase tracking-[0.3em] block mb-1.5">Linux Help</span>
+                  <span className="text-lg font-semibold">50 <span className="text-muted text-sm">PLN/h</span></span>
                 </div>
               </div>
             </motion.div>

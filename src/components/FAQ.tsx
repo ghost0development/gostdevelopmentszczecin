@@ -6,24 +6,24 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
+    q: "Ile kosztuje naprawa Linux?",
+    a: "Linux Help kosztuje 50 PLN/h za standardowe problemy (konfiguracja, sterowniki, instalacja). Złożone sprawy — uszkodzone partycje, pętle initramfs, odbudowa drzewa zależności — wycena indywidualna po diagnozie.",
+  },
+  {
+    q: "Co jeśli Linux nie wstaje po aktualizacji?",
+    a: "To najczęstszy problem. Nie formatuję — naprawiam. Odbudowuję drzewa zależności, naprawiam partycje, przywracam system z pętli initramfs. W 95% przypadków system wstaje bez utraty danych.",
+  },
+  {
+    q: "Naprawiacie Steam Deck?",
+    a: "Tak. Steam Deck to miniaturowy PC z Arch Linuxem. Naprawiamy problemy z SteamOS, aktualizacjami, dual bootem, konfliktami z grami. Zdalnie lub stacjonarnie w Szczecinie.",
+  },
+  {
     q: "Ile trwa realizacja launchera?",
     a: "Standardowo 2–4 tygodnie, zależnie od złożoności. Przed rozpoczęciem podajemy dokładny harmonogram. Cotygodniowe demo postępów — zawsze wiesz, na czym stoimy.",
   },
   {
     q: "Dlaczego cenicie 1500 PLN, a nie mniej?",
     a: "To nie jest szablon z ThemeForest. Każdy element projektujemy od zera. Dostajesz dedykowaną aplikację desktopową, nie modyfikację gotowca. Cena odzwierciedla jakość kodu i czas pracy.",
-  },
-  {
-    q: "Czy potrzebuję własnego serwera?",
-    a: "Tak. Launcher łączy się z Twoim serwerem Minecrafta. Jeśli nie masz hostingu — pomożemy wybrać i skonfigurować. Nie zostawiamy nikogo z pustymi rękami.",
-  },
-  {
-    q: "Co jeśli launcher nie będzie działać?",
-    a: "Dajemy 14 dni na pełny test. Jeśli coś nie działa — naprawiamy natychmiast. Jeśli nadal nie jesteś zadowolony — zwracamy 100% pieniędzy. Bez pytań.",
-  },
-  {
-    q: "Jak wygląda płatność?",
-    a: "50% zaliczka przed startem, 50% po ostatecznym wdrożeniu. Faktura VAT na życzenie. Opieka techniczna (150 PLN/mies.) startuje po 1 miesiącu gratis.",
   },
   {
     q: "Czy obsługujecie cracked serwery?",

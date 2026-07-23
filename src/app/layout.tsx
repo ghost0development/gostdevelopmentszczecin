@@ -256,6 +256,30 @@ const faqSchema = {
         text: "Linux Help kosztuje 50 PLN/h za standardowe problemy. Obszerne, złożone sprawy — cena indywidualna po analizie. Nie obejmuje administrowania bazami danych i serwerami produkcyjnymi.",
       },
     },
+    {
+      "@type": "Question",
+      name: "Naprawiacie Steam Deck?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Tak. Steam Deck to miniaturowy PC z Arch Linuxem. Naprawiamy problemy z SteamOS, aktualizacjami, dual bootem, konfliktami z grami. Zdalnie lub stacjonarnie w Szczecinie.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Co jeśli Linux nie wstaje po aktualizacji?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "To najczęstszy problem. Nie formatujemy — naprawiamy. Odbudowujemy drzewa zależności, naprawiamy partycje, przywracamy system z pętli initramfs. W 95% przypadków system wstaje bez utraty danych.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Gdzie znajduje się Ghost Development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ghost Development znajduje się w Szczecinie, ul. Asnyka 3/22, 71-526. Świadczymy usługi zdalnie i stacjonarnie dla klientów z całej Polski.",
+      },
+    },
   ],
 };
 
