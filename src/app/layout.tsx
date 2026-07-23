@@ -19,13 +19,14 @@ export const metadata: Metadata = {
     template: "%s | Ghost Development Szczecin",
   },
   description:
-    "Ghost Development Szczecin — tworzymy launchery Minecraft (od 1500 PLN), strony internetowe, aplikacje desktopowe i programy. Electron, Java, Kotlin, React. Bezpłatna konsultacja.",
+    "Ghost Development Szczecin — tworzymy launchery Minecraft (od 1500 PLN), strony internetowe, aplikacje desktopowe i programy. Linux Help — pomoc z Linuxem od 50 PLN/h. Electron, Java, Kotlin, React. Bezpłatna konsultacja.",
   keywords: [
     "launcher minecraft", "dedykowany launcher", "launcher do serwera", "minecraft launcher Szczecin",
     "programista minecraft", "electron minecraft", "launcher desktopowy", "serwer minecraft launcher",
     "ghost development", "Szczecin", "tworzenie launcherów", "minecraft plugin", "integracja serwera minecraft",
     "launcher java", "launcher kotlin", "aplikacja desktopowa", "strona internetowa Szczecin",
     "tworzenie stron", "programy na zamówienie", "firma programistyczna Szczecin",
+    "linux help", "pomoc linux", "linux konfiguracja", "linux naprawa", "linux skrypty",
   ],
   authors: [{ name: "Ghost Development" }],
   openGraph: {
@@ -109,6 +110,7 @@ const localBusiness = {
     "tworzenie launcherów Minecraft", "Electron", "Java", "Kotlin", "React", "TypeScript",
     "aplikacje desktopowe", "strony internetowe", "programy na zamówienie",
     "integracja z serwerem Minecraft", "REST API", "WebSocket",
+    "Linux", "Linux Help", "konfiguracja Linux", "bezpieczeństwo Linux", "skrypty Bash",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -162,6 +164,16 @@ const localBusiness = {
           description: "Aktualizacje, poprawki, nowe funkcje. Responsywność poniżej 24h.",
         },
         price: "100-300 PLN/mies.",
+        priceCurrency: "PLN",
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Linux Help",
+          description: "Pomoc z każdym problemem Linux — konfiguracja, bezpieczeństwo, skrypty, naprawa. 50 PLN/h za obszerne problemy.",
+        },
+        price: "50 PLN/h",
         priceCurrency: "PLN",
       },
     ],
@@ -236,6 +248,14 @@ const faqSchema = {
         text: "Tak, Ghost Development tworzy strony internetowe — landing page, strony firmowe z CMS i sklepy internetowe. Ceny zaczynają się od 1500 PLN.",
       },
     },
+    {
+      "@type": "Question",
+      name: "Ile kosztuje pomoc z Linuxem?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Linux Help kosztuje 50 PLN/h za obszerne problemy. Prostsze problemy — cena indywidualna, often niższa niż stawka godzinowa. Nie obejmuje administrowania bazami danych i serwerami produkcyjnymi.",
+      },
+    },
   ],
 };
 
@@ -288,6 +308,7 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 3, name: "Kontakt", item: `${siteUrl}/kontakt` },
     { "@type": "ListItem", position: 4, name: "Portfolio", item: `${siteUrl}/portfolio` },
     { "@type": "ListItem", position: 5, name: "Rezerwacja", item: `${siteUrl}/rezerwacja` },
+    { "@type": "ListItem", position: 6, name: "Linux Help", item: `${siteUrl}/linux-help` },
   ],
 };
 

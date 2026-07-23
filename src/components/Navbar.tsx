@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/#proces", label: "Proces" },
   { href: "/cennik", label: "Cennik", isPage: true },
   { href: "/portfolio", label: "Portfolio", isPage: true },
+  { href: "/linux-help", label: "Linux Help", isPage: true },
 ];
 
 export default function Navbar() {
